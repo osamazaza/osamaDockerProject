@@ -1,0 +1,6 @@
+services:
+  webapp:
+    build:
+      context: .
+      target: prod
+    command: npm start
