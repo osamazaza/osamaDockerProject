@@ -35,7 +35,7 @@ services:
     - mongo-db:/data/db
   webapp:
    container_name: mySpecialContainer1
-   build: .
+   build: osamazazatestcrew/osamadockerproject
    working_dir: /app
    env_file:
    - ./.env
