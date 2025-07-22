@@ -3,6 +3,4 @@ services:
     build:
       context: .
       target: dev
-    volumes:
-      - ./:/app
     command: npm run start-dev 
