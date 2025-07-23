@@ -1,4 +1,4 @@
 services:
   webapp:
-    image: osamazazatestcrew/osamadockerproject:latest
+    image: osamazazatestcrew/osamadockerproject
     command: npm run start-dev

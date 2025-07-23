@@ -34,7 +34,7 @@ services:
    volumes:
     - mongo-db:/data/db
   webapp:
-   image: osamazazatestcrew/osamadockerproject:latest
+   image: osamazazatestcrew/osamadockerproject
    container_name: mySpecialContainer1
    working_dir: /app
    env_file:
