@@ -1,6 +1,4 @@
 services:
   webapp:
-    build:
-      context: .
-      target: dev
-    command: npm run start-dev 
+    image: osamazazatestcrew/osamadockerproject:latest
+    command: npm run start-dev
