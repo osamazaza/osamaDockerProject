@@ -1,6 +1,7 @@
 const express = require('express');
 const mongoose = require('mongoose')
 const redis = require('redis')
+const os = require('os')
 
 
 
@@ -48,9 +49,7 @@ mongoose.connect(URI).then(() => console.log('✅ connect to db...')).catch(err 
 const pagesList =  client.get('pages');
 
 
+app.get('/', (req, res) => res.send('<h1> Hello There 6</h1>'));
+app.get('/pages', (req, res) => res.send(`<h2> ${pagesList} ... </h2>`));
 
-app.get('/', (req, res) => res.send('<h1> Hello There using github... </h1>'));
-
-app.get('/pages', (req, res) => res.send(`<h2> ${pagesList} </h2>`));
-
-app.listen(PORT, () => console.log(`App is up and running on port: ${PORT} welcome back`));
+app.listen(PORT, () => console.log(`App is up and running on port: ${PORT} welcome back1`));
