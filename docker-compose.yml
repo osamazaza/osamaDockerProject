@@ -35,14 +35,14 @@ services:
     - mongo-db:/data/db
   webapp:
    image: osamazazatestcrew/osamadockerimage
+   container_name: mySpecialContainer1
    working_dir: /app
    env_file:
    - ./.env
+   ports:
+   - "4000:4000"
    depends_on:
    - redis
 
 volumes: 
  mongo-db:
- 
-
-   
