@@ -61,7 +61,7 @@ client.on('connect', ()=> console.log('connecting to redis...'));
 const pagesList =  client.get('pages');
 
 
-app.get('/', (req, res) => res.send('<h1> Hello There 11</h1>'));
+app.get('/', (req, res) => res.send('<h1> Hello There 150</h1>'));
 app.get('/pages', (req, res) => res.send(`<h2> ${pagesList} ... </h2>`));
 
 app.listen(PORT, () => console.log(`App is up and running on port: ${PORT} welcome back1`));

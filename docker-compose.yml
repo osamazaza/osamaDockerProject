@@ -34,6 +34,16 @@ services:
    volumes:
     - mongo-db:/data/db
   webapp:
+   deploy:
+    replicas: 4
+    update_config:
+     parallelism: 2
+     delay: 30s
+    restart_policy:
+     condition: on_failure
+     delay: 5s 
+
+
    image: osamazazatestcrew/osamadockerimage
    container_name: mySpecialContainer1
    working_dir: /app
